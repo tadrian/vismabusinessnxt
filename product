@@ -1,0 +1,180 @@
+query {
+  useCompany {
+    product {
+      productNo
+      eanNo
+      description
+      description2
+      salesDescription
+      purchaseDescription
+      productGroupNo
+      productCategoryNo
+      productTypeNo
+      unit
+      stSalesUnit
+      stPurchaseUnit
+      stSalesFactor
+      stPurchaseFactor
+      weight
+      volume
+      length
+      width
+      height
+      costPrice
+      salesPrice
+      purchasePrice
+      minStock
+      maxStock
+      reorderPoint
+      reorderQuantity
+      blocked
+      isStockItem
+      isService
+      isVariableWeight
+      isBatchManaged
+      isSerialNumberManaged
+      isWebItem
+      isPurchaseItem
+      isSalesItem
+      isProductionItem
+      isProjectItem
+      isCapitalAsset
+      isPackageItem
+      isEmployeeItem
+      commissionPercent
+      commissionAmount
+      discountPercent
+      discountAmount
+      standardCostPrice
+      standardSalesPrice
+      standardPurchasePrice
+      taxAndAccountingGroupNo
+      createdDate
+      createdDateAsDate
+      createdTime
+      createdTimeAsTime
+      createdByUser
+      changedTimestamp
+      createdTimestamp
+      changedDateTime
+      changedDateTimeUtc
+      createdDateTime
+      createdDateTimeUtc
+      
+      # Relationer (joindown)
+     joindown_ProductTransaction_via_Product {
+           # Specificera fält här om det behövs, annars hämtas bara relationen
+        }
+      joindown_ProductTransaction2_via_Product {
+            # Specificera fält här om det behövs
+        }
+       joindown_OrderLine_via_Product {
+          # Specificera fält här om det behövs
+        }
+       joindown_Shipment_via_Product {
+         # Specificera fält här om det behövs
+       }
+       joindown_Reservation_via_Product {
+          # Specificera fält här om det behövs
+       }
+      joindown_AlternativeProduct_via_Product{
+          # Specificera fält här om det behövs
+      }
+     joindown_AlternativeProduct_via_AlternativeProduct{
+         # Specificera fält här om det behövs
+      }
+    joindown_PriceAndDiscountMatrix_via_Product{
+        # Specificera fält här om det behövs
+    }
+   joindown_PriceRefund_via_Product{
+         # Specificera fält här om det behövs
+    }
+    joindown_ProductDescription_via_Product{
+        # Specificera fält här om det behövs
+     }
+     joindown_ProductCustomer_via_Product{
+         # Specificera fält här om det behövs
+     }
+      joindown_ProductDocument_via_Product{
+         # Specificera fält här om det behövs
+     }
+     joindown_DocumentLink_via_Product{
+         # Specificera fält här om det behövs
+     }
+    joindown_ProductStructure_via_Product{
+         # Specificera fält här om det behövs
+    }
+    joindown_Structure_via_Product{
+         # Specificera fält här om det behövs
+     }
+     joindown_ProductDocumentLine_via_Product{
+         # Specificera fält här om det behövs
+     }
+       joindown_ProductDocumentFormula_via_Product {
+         # Specificera fält här om det behövs
+        }
+       joindown_CompanyInformation_via_StandardProduct {
+         # Specificera fält här om det behövs
+        }
+      joindown_CompanyInformation_via_StagedPaymentProduct {
+         # Specificera fält här om det behövs
+        }
+        joindown_CompanyInformation_via_InterestProductNo{
+            # Specificera fält här om det behövs
+        }
+        joindown_CompanyInformation_via_DeductFromClientRepsonsiblity1Product{
+            # Specificera fält här om det behövs
+        }
+        joindown_CompanyInformation_via_DeductFromClientRepsonsiblity2Product{
+             # Specificera fält här om det behövs
+        }
+         joindown_CompanyInformation_via_DeductFromClientRepsonsiblity3Product{
+             # Specificera fält här om det behövs
+         }
+          joindown_CompanyInformation_via_PrepaymentProductNo{
+             # Specificera fält här om det behövs
+          }
+          joindown_VoucherType_via_Product{
+            # Specificera fält här om det behövs
+          }
+          joindown_FreeInformation1_via_Product{
+             # Specificera fält här om det behövs
+          }
+         joindown_FreeInformation2_via_Product{
+              # Specificera fält här om det behövs
+          }
+          joindown_FreeInformation3_via_Product{
+               # Specificera fält här om det behövs
+          }
+          joindown_CombinationMatrix_via_FromProduct{
+              # Specificera fält här om det behövs
+          }
+          joindown_CombinationMatrix_via_ToProduct{
+             # Specificera fält här om det behövs
+          }
+         joindown_AccountOfficeProductInformation_via_Product{
+            # Specificera fält här om det behövs
+          }
+         joindown_IncomingProductData_via_Product{
+             # Specificera fält här om det behövs
+          }
+         joindown_OsrBudgetFoundation_via_OsrProduct {
+               # Specificera fält här om det behövs
+          }
+
+      # Relationer (joinup)
+       unit_joinup: joinup_Unit {
+            un
+        }
+       stSalesUnit_joinup: joinup_Unit {
+           un
+        }
+        stPurchaseUnit_joinup: joinup_Unit {
+           un
+        }
+      taxAndAccountingGroup_joinup: joinup_TaxAndAccountingGroup {
+           taxAndAccountingGroupNo
+        }
+    }
+  }
+}

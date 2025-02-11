@@ -1,0 +1,121 @@
+query {
+  useCompany {
+    order {
+      orderNo
+      customerNo
+      associateNo
+      orderDate
+      orderDateAsDate
+      requiredDeliveryDate
+      requiredDeliveryDateAsDate
+      label
+      ourReference
+      yourReference
+      requisitionNo
+      invoiceCustomerNo
+      currencyNo
+      exchangeRate
+      paymentTerms
+      paymentMethod
+      invoiceAccordingToPlan
+      invoiceReference
+      invoiceNo
+      invoicedAmountSoFarDomestic
+      settlementDate
+      settlementDateAsDate
+      invoiceDate
+      invoiceDateAsDate
+      changedDate
+      changedDateAsDate
+      changedTime
+      changedTimeAsTime
+      changedByUser
+      editStatus
+      lockedByProcessNo
+      deviateProductNo
+      contractAmountDomestic
+      sumBeforeTotalAndGroupDiscountDomestic
+      incurredCostInCurrency
+      grossProfitDomestic
+      margin
+      factoringNo
+      totalDiscountAmountInCurrency
+      totalDiscountAmountDomestic
+      sumBeforeGroupDiscountInCurrency
+      sumBeforeGroupDiscountDomestic
+      information1
+      information2
+      information3
+      information4
+      information5
+      information6
+      transactionType
+      transferToWarehouseNo
+      excludeProcessingOrOutput
+      excludeProcessingOrOutputFlags
+      orderStatus1
+      orderStatus1Flags
+      addressLine3
+       # Relationer (joindown)
+     joindown_OrderLine_via_Order {
+            # Specificera fält här om det behövs
+        }
+      joindown_Appointment_via_Order{
+            # Specificera fält här om det behövs
+        }
+      joindown_Shipment_via_Order {
+           # Specificera fält här om det behövs
+       }
+      joindown_OrderDocument_via_Order {
+           # Specificera fält här om det behövs
+       }
+       joindown_OrderDocumentLine_via_Order{
+             # Specificera fält här om det behövs
+        }
+       joindown_DocumentLink_via_Order{
+              # Specificera fält här om det behövs
+        }
+       joindown_OrderDocument_via_OrderBasis{
+             # Specificera fält här om det behövs
+        }
+        joindown_IncomingInvoice_via_Order{
+           # Specificera fält här om det behövs
+        }
+        joindown_IncomingInvoiceLine_via_Order{
+           # Specificera fält här om det behövs
+        }
+       joindown_ProductionOrder_via_Order{
+            # Specificera fält här om det behövs
+       }
+        joindown_OsrBudgetFoundation_via_Order{
+            # Specificera fält här om det behövs
+        }
+        joindown_PurchaseOrder_via_SalesOrder{
+            # Specificera fält här om det behövs
+         }
+
+      # Relationer (joinup)
+      customer_joinup: joinup_Customer {
+            customerNo
+        }
+      associate_joinup: joinup_Associate {
+            associateNo
+        }
+      invoiceCustomer_joinup: joinup_Customer {
+            customerNo
+        }
+      currency_joinup: joinup_Currency {
+            currencyNo
+        }
+     paymentTerms_joinup: joinup_PaymentTerms {
+            paymentTermsNo
+        }
+     paymentMethod_joinup: joinup_PaymentMethod {
+          paymentMethodNo
+        }
+      transferToWarehouse_joinup : joinup_Warehouse {
+            warehouseNo
+        }
+    }
+  }
+}
